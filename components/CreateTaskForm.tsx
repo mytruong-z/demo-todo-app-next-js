@@ -18,7 +18,7 @@ const CreateTaskForm: React.FC<Props> = ({onSuccess}) => {
   });
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if(!loading) {
+    if(!loading && title !== "") {
       try {
         await createTask({variables: {input: {title}}});
       } catch (e) {
@@ -36,7 +36,7 @@ const CreateTaskForm: React.FC<Props> = ({onSuccess}) => {
         name="title"
         placeholder="What would you like to get done?"
         autoComplete="off"
-        className="text-input new-task-text-input"
+        className="text-input new-task-text-input bg-white hover:border-green-300 focus:outline-none focus:border-green-300"
         value={title}
         onChange={handleTitleChange}
       />

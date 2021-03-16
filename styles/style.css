@@ -1,0 +1,48 @@
+
+.bg-teal-100 {
+    background-color: #F1F5F9;
+}
+.bg-teal-200 {
+    background-color: #E2E8F0;
+}
+.bg-teal-300 {
+    background-color: #CBD5E1;
+}
+.border-gray-300 {
+    border-color: #CBD5E1;
+}
+.border-gray-300 {
+    border-color: #E2E8F0;
+}
+.border-green-200 {
+    border-color: #84CC16;
+}
+.border-green-300 {
+    border-color: #65A30D;
+}
+.bg-green-300 {
+    backgorund-color: #65A30D;
+}
+
+.btn-active {
+    font-size: theme('fontSize.xl');
+}
+.title {
+    font-size: theme('fontSize.5xl');
+}
+@variants hover, focus {
+    .task-filter > li > a:hover {
+        @apply bg-green-300 text-white;
+    }
+}
+@media  (max-width: 767px) {
+    .logo-browser {
+        @apply hidden invisible;
+    }
+}
+
+@media  (min-width: 768px) {
+    .md\:logo-browser {
+        @apply block visible;
+    }
+}

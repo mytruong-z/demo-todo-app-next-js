@@ -8,15 +8,15 @@ interface Props {
 
 const TaskFilter: React.FC<Props> = ({ status }) => {
   return (
-    <ul className="task-filter">
+    <ul className="task-filter d-flex items-center">
       <li>
         <Link href="/" scroll={false} shallow={true}>
-          <a className={!status ? 'task-filter-active' : ''} >
+          <a className={`bg-teal-100 focus:outline-none focus:shadow-outline ${!status ? 'task-filter-active btn-active btn-active bg-green-300' : ''}`} >
             All
           </a>
         </Link>
       </li>
-      <li>
+    <li>
         <Link
           href="/[status]"
           as={`/${TaskStatus.Active}`}
@@ -24,13 +24,12 @@ const TaskFilter: React.FC<Props> = ({ status }) => {
           shallow={true}
         >
           <a
-            className={status === TaskStatus.Active ? 'task-filter-active' : ''}
-          >
+            className={`bg-teal-100 focus:outline-none focus:shadow-outline ${status === TaskStatus.Active ? 'task-filter-active bg-teal-200' : ''}`}>
             Active
           </a>
         </Link>
       </li>
-      <li>
+    <li>
         <Link
           href="/[status]"
           as={`/${TaskStatus.Completed}`}
@@ -38,8 +37,7 @@ const TaskFilter: React.FC<Props> = ({ status }) => {
           shallow={true}
         >
           <a
-            className={
-              status === TaskStatus.Completed ? 'task-filter-active' : ''
+            className={`bg-teal-100 focus:outline-none focus:shadow-outline ${status === TaskStatus.Completed ? 'task-filter-active btn-active bg-green-300' : ''}`
             }
           >
             Completed
