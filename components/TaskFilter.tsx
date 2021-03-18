@@ -24,7 +24,7 @@ const TaskFilter: React.FC<Props> = ({ status }) => {
           shallow={true}
         >
           <a
-            className={`bg-teal-100 focus:outline-none focus:shadow-outline ${status === TaskStatus.Active ? 'task-filter-active bg-teal-200' : ''}`}>
+            className={`bg-teal-100 focus:outline-none focus:shadow-outline ${status === TaskStatus.Active ? 'task-filter-active btn-active btn-active bg-green-300' : ''}`}>
             Active
           </a>
         </Link>

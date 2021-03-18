@@ -21,7 +21,7 @@
     border-color: #65A30D;
 }
 .bg-green-300 {
-    backgorund-color: #65A30D;
+    background-color: rgba(110, 231, 183, 1) !important;
 }
 
 .btn-active {
@@ -32,7 +32,9 @@
 }
 @variants hover, focus {
     .task-filter > li > a:hover {
-        @apply bg-green-300 text-white;
+        /*@apply bg-green-300 text-white;*/
+        background-color: rgba(110, 231, 183, 1) !important;
+        color: #ffffff;
     }
 }
 @media  (max-width: 767px) {
